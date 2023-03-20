@@ -1,0 +1,55 @@
+$PrimaryColor: pink;
+$BgColor: brown;
+$HeadColor: yellow;
+
+
+@mixin border() {
+    border-radius: 5px;
+}
+
+@mixin ColorHeader() {
+    color: $HeadColor;
+}
+
+@function Multiply($value, $multiply: 2) {
+    @return $value * $multiply;
+}
+
+@function ComplementColor($Color) {
+    @return Complement($Color);
+}
+
+@function TextColor() {
+    @if (lightness($BgColor) > 60) {
+        @return orange;
+    } @else {
+        @return grey;
+    }
+}
+
+p {
+    color: $PrimaryColor;
+}
+
+h3, h4, h5 {
+    @include ColorHeader()
+}
+
+h1 {
+    font-size: Multiply(20px);
+    color: ComplementColor($BgColor)
+}
+
+h2 {
+    color: TextColor();
+}
+
+body {
+    background-color: $BgColor;
+}
+
+button {
+    @include border()
+}
+
+

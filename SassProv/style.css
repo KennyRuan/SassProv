@@ -1,0 +1,24 @@
+p {
+  color: pink;
+}
+
+h3, h4, h5 {
+  color: yellow;
+}
+
+h1 {
+  font-size: 40px;
+  color: Complement(brown);
+}
+
+h2 {
+  color: grey;
+}
+
+body {
+  background-color: brown;
+}
+
+button {
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */
